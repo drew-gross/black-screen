@@ -1,9 +1,14 @@
-let webpackTargetElectronRenderer = require('webpack-target-electron-renderer');
+let path = require("path")
+let webpackTargetElectronRenderer = require("webpack-target-electron-renderer");
 
 let config = {
-    entry: "./src/main/Main.ts",
+    entry: {
+        main: "./src/main/Main.ts",
+        bundle: "./src/views/Main.tsx",
+    },
     output: {
-        filename: "./compiled/bundle.js",
+        path: path.join(__dirname, "compiled"),
+        filename: "[name].bundle.js",
     },
     devtool: "source-map",
     resolve: {
