@@ -52,10 +52,14 @@
     "electron-rebuild": "1.2.0",
     "mocha": "3.0.2",
     "npm-check-updates": "2.8.0",
+    "source-map-loader": "0.1.5",
     "spectron": "3.3.0",
+    "ts-loader": "0.8.2",
     "ts-node": "1.3.0",
     "tslint": "3.15.1",
-    "typescript": "2.0.0"
+    "typescript": "2.0.0",
+    "webpack": "1.13.2",
+    "webpack-target-electron-renderer": "0.4.0"
   },
   "scripts": {
     "preinstall": "npm prune",
@@ -73,7 +77,8 @@
     "cleanup": "rm -rf compiled/src",
     "copy-html": "mkdir -p compiled/src/views && cp src/views/index.html compiled/src/views",
     "compile": "npm run cleanup && npm run tsc && npm run copy-html",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "webpack": "webpack"
   },
   "license": "MIT",
   "directories": {

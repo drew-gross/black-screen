@@ -1,5 +1,5 @@
 /node_modules/
-/compiled/src/*
+/compiled/*
 /tmp/*
 /npm-debug.log
 /dist/*
